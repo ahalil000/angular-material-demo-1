@@ -1,0 +1,49 @@
+<div fxHide.gt-xs>
+    <div fxFlex fxLayout fxLayoutAlign="start">
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+    </div>
+</div>
+
+<mat-toolbar (click)="onWrapperClick()">
+    <mat-toolbar-row>
+        <span class="menu-spacer"></span>
+        <div fxFlex fxLayout fxLayoutAlign="start" fxHide.xs class="justify-content:flex-start">
+            <span class="topbarheader">
+                <mat-icon>pets</mat-icon>
+                {{appname}}
+            </span> 
+        </div> 
+        <div fxShow="true" fxHide.lt-md="true" class="justify-content:flex-end">
+            <app-submenu (sidenavClose)="sidenav.close()"></app-submenu> 
+        </div>
+        <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span style="font-size:1.2em;vertical-align:top;"> {{userName}}</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>account_circle</mat-icon>
+                    <span><a routerLink="/profile">Profile</a></span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>settings_applications</mat-icon>
+                    <span><a routerLink="/settings">Settings</a></span>
+                </button>
+                <button mat-menu-item disabled>
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span><a routerLink="/logout">Logout</a></span>
+                </button>
+            </mat-menu>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

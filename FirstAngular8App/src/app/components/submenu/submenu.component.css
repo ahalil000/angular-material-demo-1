@@ -1,0 +1,15 @@
+.menu-spacer {
+    flex: 1 1 calc(33.3% - 32px);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-caption{
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 12px;
+    font-size: small;
+}

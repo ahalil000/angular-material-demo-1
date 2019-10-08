@@ -1,0 +1,16 @@
+<div fxFlex fxLayout fxLayoutAlign="start">
+    <mat-icon>notifications</mat-icon> <a routerLink="/notifications"><span class="nav-caption">Notifications</span></a>
+    <mat-icon>message</mat-icon> <span class="nav-caption"><a routerLink="/messages">Messages</a></span>
+    <mat-icon>account_box</mat-icon> <span class="nav-caption"><a routerLink="/myaccount">Account</a></span>
+    <mat-icon>play_circle_filled</mat-icon><span class="nav-caption"><a routerLink="/demos" [matMenuTriggerFor]="appMenu">Demos</a></span>
+    <mat-menu #appMenu="matMenu" yPosition="above">
+        <button mat-menu-item><mat-icon>widgets</mat-icon><a routerLink="/editgrid">Editable Grid</a></button>
+        <button mat-menu-item><mat-icon>widgets</mat-icon><a routerLink="/inputform">Input Form</a></button>
+        <button mat-menu-item><mat-icon>widgets</mat-icon><a routerLink="/toaster">Toaster</a></button>
+        <button mat-menu-item><mat-icon>widgets</mat-icon><a routerLink="/dialogform">Dialog Form</a></button>
+        <button mat-menu-item><mat-icon>widgets</mat-icon><a routerLink="/wizardform">Wizard Form</a></button>
+        <button mat-menu-item><mat-icon>widgets</mat-icon><a routerLink="/searchform">Search Screen</a></button>
+    </mat-menu>
+
+
+</div>

@@ -1,0 +1,20 @@
+<section fxLayout="column" fxFlexAlign="stretch">
+  <div fxFlexAlign="center">
+    <p>Welcome to the Material Angular Demo Application</p>
+  </div>
+
+  <p>In this application we are going to work with:</p>
+
+  <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
+    <mat-tab label="Material Components"> 
+      <p>You will see demos of different material components.</p> 
+    </mat-tab>
+    <mat-tab label="Using Web API">
+       <p>Calling of Web APIs from our angular app.</p>
+      </mat-tab>
+    <mat-tab label="Fully responsive navigation menu">
+       <p>Using material components and the flex module, create fully responsive navigation menu, 
+         with its side-bar as well.</p>
+      </mat-tab>
+  </mat-tab-group>
+</section>
